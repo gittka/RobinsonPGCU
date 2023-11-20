@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="Appli" prefHeight="700.0" prefWidth="892.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.robinson.logiqueformelle.ApplicationController">
+   <children>
+      <Label alignment="CENTER" layoutX="178.0" layoutY="48.0" prefHeight="74.0" prefWidth="574.0" style="-fx-background-color: orange; -fx-border-radius: 50px; -fx-border-width: 5px; -fx-background-radius: 50px;" text="ALGORITHME D'UNIFICATION DE ROBINSON" textFill="WHITE">
+         <font>
+            <Font name="Lucida Bright Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="184.0" prefHeight="18.0" prefWidth="86.0" text="Terme 1 :">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="162.0" layoutY="243.0" prefHeight="18.0" prefWidth="74.0" text="Terme 2 :">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="term1" layoutX="241.0" layoutY="180.0" prefHeight="26.0" prefWidth="514.0" />
+      <TextField fx:id="term2" layoutX="241.0" layoutY="239.0" prefHeight="26.0" prefWidth="514.0" />
+      <Label layoutX="160.0" layoutY="469.0" prefHeight="18.0" prefWidth="74.0" text="Résultat :">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="result" editable="false" layoutX="241.0" layoutY="367.0" onInputMethodTextChanged="#change" prefHeight="223.0" prefWidth="513.0" />
+      <Button layoutX="696.0" layoutY="293.0" mnemonicParsing="false" onAction="#unify" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #2949a9;" text="Unifier" textFill="WHITE">
+         <font>
+            <Font name="Centaur" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="73.0" mnemonicParsing="false" onAction="#back" prefHeight="34.0" prefWidth="101.0" style="-fx-background-color: #2949a9;" text="Accueil" textFill="WHITE">
+         <graphic>
+            <ImageView fx:id="accueil_icon" fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@téléchargement.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -11,7 +11,7 @@ public class LexicalAnalyzer {
 	// Symbole pattern - formal description of lexems' class that
 	private enum SymbolePattern {
 		VARIABLE, CONSTANT, FUNCTION
-	};
+	}
 
 	private static final List<String> VARIABLE = Arrays
 			.asList("x0", "x1", "x2", "x3", "x4", "x5", "x6", "x7", "x8", "x9",
@@ -20,7 +20,7 @@ public class LexicalAnalyzer {
 					"y6", "y7", "y8", "y9", "y10", "y11", "y12", "y13", "y14",
 					"y15", "y16", "y17", "y18", "y19", "y20");
 	private static final List<String> CONSTANT = Arrays.asList("a", "b", "c");
-	private static final List<String> FUNCTION = Arrays.asList("f", "h");
+	private static final List<String> FUNCTION = Arrays.asList("f", "g", "h");
 
 	private Symbole Symbole = null;
 
@@ -32,13 +32,9 @@ public class LexicalAnalyzer {
 		return lexem.split("[,()]");
 	}
 
-	public Symbole getSymbole() {
-		return Symbole;
-	}
 
-	public void setSymbole(Symbole Symbole) {
-		this.Symbole = Symbole;
-	}
+
+
 
 	public Symbole analyzeLexem(String lexem) {
 
@@ -63,7 +59,6 @@ public class LexicalAnalyzer {
 			} else {
 				return null;
 			}
-
 		}
 
 		// FUNCTION or NULL
@@ -71,12 +66,11 @@ public class LexicalAnalyzer {
 			// System.out.println("parsedLexem.length NOT 1");
 			// if first symbol not a "f, h" return null
 			if (defineSymbolePattern(parsedLexem[0]) != SymbolePattern.FUNCTION) {
-				System.out
-						.println("defineSymbolePattern(parsedLexem[0]) != SymbolePattern.FUNCTION");
+				System.out.println("defineSymbolePattern(parsedLexem[0]) != SymbolePattern.FUNCTION");
 				return null;
 			}
 
-			// if paranthes not match return null
+			// if parantheses not match return null
 			else if (!isParenthesisMatch(lexem)) {
 				// System.out.println("!isParenthesisMatch(lexem)");
 				return null;
@@ -87,17 +81,15 @@ public class LexicalAnalyzer {
 
 					if ((!symbol.isEmpty())
 							&& (defineSymbolePattern(symbol) != SymbolePattern.VARIABLE
-									&& defineSymbolePattern(symbol) != SymbolePattern.CONSTANT && defineSymbolePattern(symbol) != SymbolePattern.FUNCTION)) {
+							&& defineSymbolePattern(symbol) != SymbolePattern.CONSTANT
+							&& defineSymbolePattern(symbol) != SymbolePattern.FUNCTION)) {
 						System.out.println("LOL- " + symbol);
 						return null;
 					}
 				}
 				Symbole = fromStringToPredicate(lexem);
-
 			}
-
 		}
-
 		return Symbole;
 	}
 
@@ -116,7 +108,7 @@ public class LexicalAnalyzer {
 
 	private boolean isParenthesisMatch(String str) {
 
-		Stack<Character> stack = new Stack<Character>();
+		Stack<Character> stack = new Stack<>();
 
 		char c;
 		for (int i = 0; i < str.length(); i++) {
@@ -178,7 +170,7 @@ public class LexicalAnalyzer {
 
 			int paranthesesCounter = 0;
 			String arg = "";
-			List<Symbole> args = new ArrayList<Symbole>();
+			List<Symbole> args = new ArrayList<>();
 
 			for (int i = 0; i < functionBody.length(); ++i) {
 				char curr = functionBody.charAt(i);
@@ -204,5 +196,4 @@ public class LexicalAnalyzer {
 		}
 		return predicate;
 	}
-
 }

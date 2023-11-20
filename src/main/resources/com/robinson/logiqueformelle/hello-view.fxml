@@ -1,16 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.robinson.logiqueformelle.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane fx:id="Accueil" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="892.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.robinson.logiqueformelle.HelloController">
+   <children>
+      <ImageView fx:id="logo" fitHeight="150.0" fitWidth="201.0" layoutX="349.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IAI_logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="328.0" layoutY="180.0" prefHeight="18.0" prefWidth="234.0" text="INSTITUT AFRICAIN D'INFORMATIQUE">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="358.0" layoutY="199.0" prefHeight="18.0" prefWidth="166.0" text="BP: 2263 Libreville, GABON">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="218.0" prefHeight="18.0" prefWidth="202.0" text="Tel: +241 77 70 55 00 - 77 70 56 00">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="359.0" layoutY="237.0" prefHeight="18.0" prefWidth="166.0" text="Site Web: www.iaisiege.org">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="358.0" layoutY="256.0" prefHeight="18.0" prefWidth="166.0" text="Email: contact@iaisiege.org" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="286.0" prefHeight="40.0" prefWidth="472.0" text="TRAVAIL PRATIQUE DE LOGIQUE FORMELLE" underline="true">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="182.0" layoutY="334.0" prefHeight="74.0" prefWidth="574.0" style="-fx-background-color: orange; -fx-border-radius: 50px; -fx-border-width: 5px; -fx-background-radius: 50px;" text="ALGORITHME D'UNIFICATION DE ROBINSON" textFill="WHITE">
+         <font>
+            <Font name="Lucida Bright Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="417.0" layoutY="426.0" prefHeight="18.0" prefWidth="94.0" text="Présenté par :">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="445.0" prefHeight="40.0" prefWidth="234.0" text="TCHOUPOU KIAMPI Alex">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="387.0" layoutY="475.0" prefHeight="18.0" prefWidth="166.0" text="Elève-Ingénieur en 2e Année">
+         <font>
+            <Font name="Times New Roman Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="424.0" layoutY="511.0" prefHeight="18.0" prefWidth="94.0" text="Supervisé par :">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="383.0" layoutY="525.0" prefHeight="40.0" prefWidth="166.0" text="Dr Roger NOUSSI">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="384.0" layoutY="553.0" prefHeight="18.0" prefWidth="166.0" text="Enseignant Permanent à l'IAI">
+         <font>
+            <Font name="Times New Roman Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="383.0" layoutY="588.0" prefHeight="18.0" prefWidth="166.0" text="Année Académique 2022-20023" underline="true">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="click" layoutX="383.0" layoutY="629.0" mnemonicParsing="false" onAction="#begin" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #2a6ade;" text="Cliquer pour commencer" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
